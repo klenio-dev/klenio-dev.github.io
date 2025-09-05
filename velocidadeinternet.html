@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melhore sua Internet Trocando o Cabo de Rede</title>
     <style>
-    :root {
+   :root {
       --bg: #0b0c0f;
       --panel: #12141a;
       --text: #e6e6e6;
@@ -15,6 +15,14 @@
       --warn: #f59e0b;
       --bad: #ef4444;
       --ring: rgba(125, 211, 252, .25);
+    }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 600px at 10% -10%, var(--ring), transparent), var(--bg);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+      line-height: 1.6;
     }
     @media (prefers-color-scheme: light) {
       :root {
