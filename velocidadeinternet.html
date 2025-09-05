@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🚀 Internet lenta? O cabo errado pode ser o vilão (Cat5 vs Cat6)</title>
+  <meta name="description" content="Trocar o cabo entre o modem de fibra e o roteador de Cat5 para Cat6 (ou Cat5e) pode liberar toda a velocidade do seu plano. Entenda como identificar o gargalo e resolver." />
+  <meta name="author" content="Klenio Freire de Lima" />
+  <link rel="canonical" href="" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Internet lenta? O cabo errado pode ser o vilão (Cat5 vs Cat6)" />
+  <meta property="og:description" content="Troque Cat5 por Cat6 (ou Cat5e) entre modem e roteador e elimine o gargalo: planos de 300 Mb não devem ficar travados em 100 Mb." />
+  <meta property="og:image" content="" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Internet lenta? O cabo errado pode ser o vilão (Cat5 vs Cat6)" />
+  <meta name="twitter:description" content="Troque Cat5 por Cat6 (ou Cat5e) entre modem e roteador e elimine o gargalo: planos de 300 Mb não devem ficar travados em 100 Mb." />
+  <meta name="twitter:image" content="" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Internet lenta? O cabo errado pode ser o vilão (Cat5 vs Cat6)",
+    "description": "Trocar o cabo entre o modem de fibra e o roteador de Cat5 para Cat6 (ou Cat5e) pode liberar toda a velocidade do seu plano.",
+    "author": {
+      "@type": "Person",
+      "name": "Klenio Freire de Lima"
+    },
+    "datePublished": "2025-09-05",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --panel: #12141a;
+      --text: #e6e6e6;
+      --muted: #a8b0bf;
+      --accent: #7dd3fc;
+      --ok: #22c55e;
+      --warn: #f59e0b;
+      --bad: #ef4444;
+      --ring: rgba(125, 211, 252, .25);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --panel: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #0284c7;
+        --ring: rgba(2, 132, 199, .15);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 600px at 10% -10%, var(--ring), transparent), var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      letter-spacing: 0.2px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      display: grid;
+      gap: 10px;
+      padding: 28px 0 6px;
+      border-bottom: 1px solid rgba(148,163,184,.15);
+    }
+    .eyebrow { color: var(--muted); font-size: 0.9rem; }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3.2vw + 1rem, 3rem);
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+    .meta { color: var(--muted); font-size: 0.95rem; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .badge { padding: 2px 8px; border-radius: 999px; background: rgba(125, 211, 252, .12); color: var(--accent); border: 1px solid rgba(125, 211, 252, .35); }
+
+    article { padding: 22px 0 60px; }
+    section { margin: 28px 0; }
+    h2 { font-size: 1.4rem; margin: 26px 0 12px; }
+    p { margin: 12px 0; }
+    .callout {
+      border: 1px solid rgba(148,163,184,.25);
+      background: linear-gradient(180deg, rgba(148,163,184,.08), transparent);
+      padding: 14px 16px;
+      border-radius: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(148,163,184,.2);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 10px 30px -20px rgba(0,0,0,.5);
+    }
+    .card h3 { margin: 2px 0 8px; font-size: 1.05rem; }
+    .tag { font-size: .8rem; color: var(--muted); }
+    .good { color: var(--ok); }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+
+    .checklist li + li { margin-top: 8px; }
+    ul, ol { padding-left: 1.2rem; }
+
+    .footer-cta {
+      display: grid;
+      gap: 8px;
+      padding: 18px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(34, 197, 94, .08), transparent);
+      border: 1px solid rgba(34, 197, 94, .25);
+    }
+
+    .share {
+      display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;
+    }
+    .btn {
+      appearance: none; border: 1px solid rgba(148,163,184,.35); background: var(--panel); color: var(--text);
+      padding: 8px 12px; border-radius: 12px; cursor: pointer;
+    }
+    .btn:hover { border-color: var(--accent); box-shadow: 0 0 0 4px var(--ring); }
+    code.kbd { background: var(--panel); border: 1px solid rgba(148,163,184,.3); padding: 2px 6px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; }
+
+    footer { color: var(--muted); border-top: 1px solid rgba(148,163,184,.15); padding: 22px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="eyebrow">Artigo técnico • Redes domésticas</div>
+      <h1>Internet lenta? O <em>cabo errado</em> pode ser o vilão (Cat5 vs Cat6)</h1>
+      <div class="meta">
+        <span>Por <strong>Klenio Freire de Lima</strong></span>
+        <span>•</span>
+        <time datetime="2025-09-05">05 de setembro de 2025</time>
+        <span class="badge">Leitura: ~5 min</span>
+      </div>
+    </header>
+
+    <article>
+      <section>
+        <p>Muita gente contrata um plano de internet de <strong>300 Mb, 500 Mb ou até 1 Gb</strong>, mas quando faz o teste de velocidade… nunca chega perto do valor contratado. O primeiro instinto é culpar o <strong>Wi‑Fi</strong> ou a <strong>operadora</strong>. Mas existe um detalhe escondido que quase ninguém olha: <strong>o cabo de rede entre o modem de fibra e o roteador</strong>.</p>
+        <div class="callout">
+          <p><strong>Resumo em 1 frase:</strong> se o cabo entre o modem e o roteador for <strong>Cat5</strong>, ele limita a conexão a <strong>100 Mb</strong>, criando um gargalo que impede que o seu plano (ex.: 300 Mb) chegue ao roteador e, consequentemente, ao Wi‑Fi.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>🔌 O gargalo invisível: Cat5, Cat5e e Cat6</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Cat5</h3>
+            <div class="tag bad">Até ~100 Mb</div>
+            <p>Antigo e comum em instalações antigas. <strong>Cria gargalo</strong> em planos acima de 100 Mb.</p>
+          </div>
+          <div class="card">
+            <h3>Cat5e</h3>
+            <div class="tag warn">Até ~1 Gb</div>
+            <p>Versão melhorada do Cat5. Já resolve a maioria dos planos residenciais atuais.</p>
+          </div>
+          <div class="card">
+            <h3>Cat6</h3>
+            <div class="tag good">Até ~10 Gb (curtas distâncias)</div>
+            <p>Blindagem e frequência superiores. Excelente para eliminações de gargalo e para <em>future‑proof</em>.</p>
+          </div>
+        </div>
+        <p><strong>Conclusão:</strong> plano de <strong>300 Mb</strong> com cabo <strong>Cat5</strong> entre modem e roteador <em>vai travar</em> em ~100 Mb. Trocar por <strong>Cat6</strong> (ou <strong>Cat5e</strong>) libera a velocidade contratada.</p>
+      </section>
+
+      <section>
+        <h2>📡 E o Wi‑Fi, onde entra?</h2>
+        <p>O Wi‑Fi <em>depende</em> do que chega ao roteador. Se o roteador recebe apenas <strong>100 Mb</strong> pelo cabo, ele nunca poderá entregar mais que isso pelo Wi‑Fi — mesmo que tenha antenas potentes e suporte a bandas modernas.</p>
+      </section>
+
+      <section>
+        <h2>✅ Como resolver (passo a passo)</h2>
+        <ol class="checklist">
+          <li><strong>Localize</strong> o cabo que conecta o <strong>modem de fibra</strong> ao <strong>roteador</strong>.</li>
+          <li><strong>Confira a inscrição</strong> no próprio cabo (na capa geralmente está escrito: <code class="kbd">Cat5</code>, <code class="kbd">Cat5e</code> ou <code class="kbd">Cat6</code>).</li>
+          <li>Se for <strong>Cat5</strong>, <strong>substitua</strong> por <strong>Cat6</strong> (ou <strong>Cat5e</strong> se o orçamento for menor).</li>
+          <li><strong>Reinicie</strong> modem e roteador após a troca.</li>
+          <li><strong>Teste a velocidade</strong> novamente (de preferência via cabo, direto no roteador, para validar o link).</li>
+        </ol>
+        <div class="callout">
+          <p><strong>Dica:</strong> se possível, utilize cabos prontos certificados ou crimpe com conectores de qualidade; evite dobras fechadas e trajetos próximos a fontes de interferência elétrica.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>🧭 Checklist rápido de diagnóstico</h2>
+        <ul class="checklist">
+          <li>Plano contratado &gt; 100 Mb?</li>
+          <li>Link modem ↔ roteador mostra 100 Mb ou 1 Gb? (alguns roteadores exibem a velocidade do link WAN/LAN)</li>
+          <li>Cabo identificado como Cat5, Cat5e ou Cat6?</li>
+          <li>Após a troca, o teste por <em>cabo</em> aproxima-se do contratado?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🎯 Conclusão</h2>
+        <p>Muitas vezes, <strong>o problema não é a operadora nem o Wi‑Fi</strong>, e sim um <strong>cabo antigo</strong> que limita toda a rede. Substituir <strong>Cat5 por Cat6</strong> (ou Cat5e) na conexão entre o <strong>modem</strong> e o <strong>roteador</strong> é uma solução simples, barata e muito eficaz para liberar a velocidade do seu plano.</p>
+      </section>
+
+      <section class="footer-cta">
+        <p><strong>Curtiu a dica?</strong> Compartilhe com quem vive reclamando da internet lenta 😉</p>
+        <div class="share">
+          <button class="btn" onclick="navigator.clipboard.writeText(window.location.href); this.textContent='Link copiado!';">Copiar link</button>
+          <a class="btn" href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">Voltar ao topo</a>
+        </div>
+      </section>
+    </article>
+
+    <footer>
+      <small>© 2025 Klenio Freire de Lima • Este artigo é para fins educativos e pode ser reutilizado com crédito ao autor.</small>
+    </footer>
+  </div>
+</body>
+</html>
