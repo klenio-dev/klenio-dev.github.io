@@ -16,13 +16,19 @@
       --bad: #ef4444;
       --ring: rgba(125, 211, 252, .25);
     }
-    body {
+    html, body {
       margin: 0;
-      background: radial-gradient(1200px 600px at 10% -10%, var(--ring), transparent), var(--bg);
-      background-attachment: fixed;
+      height: 100%;
+    }
+    body {
       color: var(--text);
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
       line-height: 1.6;
+      background-color: var(--bg);
+      background-image: radial-gradient(1200px 600px at 10% -10%, var(--ring), transparent);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
     }
     @media (prefers-color-scheme: light) {
       :root {
@@ -148,8 +154,8 @@
 
         <h2>🛒 Onde comprar cabos de rede de qualidade</h2>
         <p>Separei alguns links para facilitar, de acordo com o tamanho e necessidade:</p>
-        <a class="btn" href="https://mercadolivre.com/sec/2kNjzJG" class="btn-compra" target="_blank">Cabo Cat6 - 1 metro</a> <br> 
-        <a class="btn" href="https://mercadolivre.com/sec/1FzrFKw" class="btn-compra" target="_blank">Cabo Cat6 - 2 metros</a><br>
+        <a class="btn" href="https://mercadolivre.com/sec/2kNjzJG" class="btn-compra" target="_blank">Cabo Cat6 - 1 metro</a>
+        <a class="btn" href="https://mercadolivre.com/sec/1FzrFKw" class="btn-compra" target="_blank">Cabo Cat6 - 2 metros</a>
         <a class="btn" href="https://mercadolivre.com/sec/2C2PSmL" class="btn-compra" target="_blank">Cabo Cat6 - 10 metros</a>
         
         <h2>🎯 Conclusão</h2>
