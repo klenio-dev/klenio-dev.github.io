@@ -6,15 +6,25 @@ body {
 }
 
 /* HEADER */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+}
+
 header img {
   width: 200px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,255,255,0.2);
-  transition: transform 0.3s;
+  transition: 0.3s;
 }
 
 header img:hover {
   transform: translateY(-5px) scale(1.03);
+}
+
+h1 {
+  color: #00ffff;
 }
 
 /* MAIN */
@@ -74,6 +84,36 @@ a:hover {
   font-size: 0.9em;
 }
 
+/* ARTIGOS */
+.artigos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.artigo {
+  display: block;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.artigo:hover {
+  background: #222;
+  transform: translateY(-3px);
+}
+
+.artigo h3 {
+  margin: 5px 0 0;
+  font-size: 1em;
+}
+
+.artigo .data {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -84,6 +124,6 @@ footer {
 /* RESPONSIVO */
 @media (max-width: 600px) {
   header img {
-    width: 100px;
+    width: 140px;
   }
 }
