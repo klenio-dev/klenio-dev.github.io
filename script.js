@@ -1,4 +1,3 @@
-// Animação ao rolar
 const cards = document.querySelectorAll('.card');
 
 window.addEventListener('scroll', () => {
