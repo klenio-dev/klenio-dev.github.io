@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #e0e0e0;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+}
+
+header img {
+  width: 140px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00ffff;
+  transition: 0.3s;
+}
+
+header img:hover {
+  transform: scale(1.08);
+}
+
+h1 {
+  margin: 15px 0 5px;
+  color: #00ffff;
+}
+
+/* MAIN */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* CARDS */
+.card {
+  background: #121212;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 0, 100, 0.3);
+}
+
+/* TITULOS */
+h2 {
+  color: #ff0066;
+}
+
+/* LINKS */
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff0066;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background: #1f1f1f;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  header img {
+    width: 100px;
+  }
+}
