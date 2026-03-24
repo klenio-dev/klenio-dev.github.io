@@ -6,26 +6,15 @@ body {
 }
 
 /* HEADER */
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
-}
-
 header img {
-  width: 140px;
-  border-radius: 50%;
-  box-shadow: 0 0 20px #00ffff;
-  transition: 0.3s;
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,255,255,0.2);
+  transition: transform 0.3s;
 }
 
 header img:hover {
-  transform: scale(1.08);
-}
-
-h1 {
-  margin: 15px 0 5px;
-  color: #00ffff;
+  transform: translateY(-5px) scale(1.03);
 }
 
 /* MAIN */
