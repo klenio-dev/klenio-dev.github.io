@@ -3,134 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Klenio • Página Pessoal</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0a0a0a;
-      color: #e0e0e0;
-    }
+  <title>Klenio • Portfólio</title>
 
-    header {
-      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
-      text-align: center;
-      padding: 40px 20px;
-    }
+  <link rel="stylesheet" href="style.css" />
 
-    header img {
-      max-width: 260px;
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-    }
-
-    h1 {
-      color: #00ffff;
-      font-size: 2.8em;
-      margin-top: 20px;
-    }
-
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 30px 20px;
-      background-color: #121212;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 0, 100, 0.2);
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      color: #ff0066;
-      border-bottom: 1px solid #333;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin: 6px 0;
-    }
-
-    a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 0.9em;
-    }
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <main>
-    <section>
-      <center><img src="klenio-dev.jpg" alt="Klenio" /></center>
-    <h1>@klenio-dev</h1>
-    <p>💻 Apaixonado por tecnologia • 🎮 Gamer • 🎸 Rockeiro • 🎥 Otaku de carteirinha</p>
-      
-      <h2>🧠 Sobre Mim</h2>
-      <p>Sou movido por desafios, criatividade e tecnologia. Quando não estou programando ou estudando, estou me aprofundando em novos mundos com um bom anime, jogo ou trilha sonora pesada!</p>
-      <p>Currículo completo – <a href="https://lattes.cnpq.br/0494397234876576">Lattes</a></p>
-    </section>
 
-    <section>
-      <h2>🎓 Formação Acadêmica</h2>
-      <ul>
-        <li>Bacharel em Administração – UFRN (2018)</li>
-        <li>MBA em Contabilidade com Ênfase em Tributos – Anhanguera (2020)</li>
-        <li>Pós-graduação em Engenharia de Software – Anhanguera (2023)</li>
-        <li>Graduando em Engenharia de Software – Anhanguera (Previsão: 2026)</li>
-      </ul>
-    </section>
+<header>
+  <img src="klenio-dev.jpg" alt="Foto de perfil de Klenio">
+  <h1>Klenio Freire</h1>
+  <p>Engenharia de Software • Tecnologia • Desenvolvimento</p>
+</header>
 
-    <section>
-      <h2>💼 Áreas de Interesse</h2>
-      <ul>
-        <li>Engenharia de Software</li>
-        <li>Desenvolvimento de Sistemas</li>
-        <li>Ciência de Dados</li>
-      </ul>
-    </section>
+<main>
 
-    <section>
-      <h2>📜 Certificações e Cursos</h2>
-      <ul>
-        <li>Metodologias Ágeis e Gestão de Projetos (Scrum, Agile Leadership)</li>
-        <li>C#, Java e Python</li>
-        <li>Segurança em Redes</li>
-        <li>FIC+ em Sistemas Embarcados - IFRN</li>
-      </ul>
-    </section>
+  <section class="card">
+    <h2>🧠 Sobre Mim</h2>
+    <p>Sou apaixonado por tecnologia, desenvolvimento e resolução de problemas. Tenho foco em evolução constante e criação de soluções eficientes.</p>
+    <a href="https://lattes.cnpq.br/0494397234876576" target="_blank">Ver Currículo Lattes</a>
+  </section>
 
-    <section>
-      <h2>🌐 Idiomas</h2>
-      <p>Inglês Intermediário (B2) – <a href="https://cert.efset.org/en/vVsH9a">Certificação EFSET</a></p>
-    </section>
-    <section>
-      <h2>📚 Artigos</h2>
-      <p>01/05/2025<br><a href="https://klenio-dev.github.io/gestaofinanceirapessoal.html">Lucro é consequência: pessoas são estratégia</a></p>
-      <p>09/07/2025<br><a href="https://klenio-dev.github.io/velocidadeinternet.html">Aumentar velocidade de sua internet.</a></p>
-      <p>30/11/2025<br><a href="https://klenio-dev.github.io/custos1.html">Entre números, decisões e responsabilidades</a></p>
-      <p>02/03/2026<br><a href="https://klenio-dev.github.io/engsoft1.html">Entre ciclos e códigos</a></p>
-    </section>
-  </main>
+  <section class="card">
+    <h2>🎓 Formação</h2>
+    <ul>
+      <li>Administração – UFRN</li>
+      <li>MBA em Tributos – Anhanguera</li>
+      <li>Pós em Engenharia de Software</li>
+      <li>Graduando em Engenharia de Software</li>
+    </ul>
+  </section>
 
-  <footer>
-    &copy; 2025 Klenio • Feito com 💻 e ☕
-  </footer>
+  <section class="card">
+    <h2>💻 Habilidades</h2>
+    <div class="skills">
+      <span>C#</span>
+      <span>Java</span>
+      <span>Python</span>
+      <span>SQL</span>
+      <span>HTML</span>
+      <span>CSS</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📚 Artigos</h2>
+    <ul>
+      <li><a href="gestaofinanceirapessoal.html">Lucro é consequência</a></li>
+      <li><a href="velocidadeinternet.html">Velocidade da Internet</a></li>
+      <li><a href="custos1.html">Entre números e decisões</a></li>
+      <li><a href="engsoft1.html">Entre ciclos e códigos</a></li>
+    </ul>
+  </section>
+
+  <section class="card contato">
+    <h2>📞 Contato</h2>
+    <p>Email: seuemail@email.com</p>
+    <p>GitHub: <a href="https://github.com/klenio-dev">github.com/klenio-dev</a></p>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Klenio • Desenvolvido por mim
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
