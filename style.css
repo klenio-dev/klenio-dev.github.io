@@ -123,9 +123,9 @@ footer {
 }
 
 /* RESPONSIVO */
-@media (max-width: 395px) {
+@media (max-width: 200px) {
   header img {
-    width: 263px;
-    height: 395px;
+    width: 200px;
+    height: 300px;
   }
 }
